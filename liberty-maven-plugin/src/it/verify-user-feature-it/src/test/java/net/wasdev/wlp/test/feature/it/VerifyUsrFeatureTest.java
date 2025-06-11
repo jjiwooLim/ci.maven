@@ -17,7 +17,6 @@ package net.wasdev.wlp.test.feature.it;
 
 import static org.junit.Assert.*;
 import org.junit.Test;
-import org.junit.After;
 import org.junit.Assume;
 import java.io.File;
 import java.io.IOException;
@@ -34,7 +33,7 @@ import java.io.FileInputStream;
 public class VerifyUsrFeatureTest {
 	
 	static File mavenLocalRepo = new File(System.getProperty("user.home")+ "/.m2/repository");
-	static File userTestRepo = new File(mavenLocalRepo, "test/user/test/features");
+	static File userTestRepo = new File(mavenLocalRepo, "test/user/test/osgi");
 	
 	Logger logger = Logger.getLogger(VerifyUsrFeatureTest.class.getName());
 	
@@ -74,7 +73,6 @@ public class VerifyUsrFeatureTest {
     	assertTrue(buildLogCheck(CWWKF1508E_MESSAGE));
     }
     
-
     
     public boolean buildLogCheck(String msg) throws Exception {
         File buildLog = new File("build.log");
